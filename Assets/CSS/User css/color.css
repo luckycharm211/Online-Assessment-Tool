@@ -1,0 +1,47 @@
+:root{
+    --black-:#000000;
+    --Primary-1200:#fe4501; 
+    --Primary-1100:#e56f30;
+    --Primary-1000:#ed996c;
+    --Primary-900:#ed996c;
+    --Primary-800:#efa57e;
+    --Primary-700:#f1b291;
+    --Primary-600:#f4bfa3;
+    --Primary-500:#f6ccb5;
+    --Primary-400:#f8d9c8;
+    --Primary-300:#fae5da;
+    --Primary-200:#f8d9c8;
+    --Primary-100:#fdf2ed;
+
+    /* gray */
+    --gray2-100:#b2aaa4;
+    --woodsmoke:#1d1b19;
+    --dark-gray:#605e5c;
+    /* gray 2 */
+    --gray-900:#7a7a7a;
+    --gray-800:#898989;
+    --gray-700:#979797;
+    --gray-600:#a6a6a6;
+    --gray-500:#b5b5b5;
+    --gray-400:#c4c4c4;
+    --gray-300:#d3d3d3;
+    --gray-200:#e1e1e1;
+    --gray-100:#f0f0f0;
+
+    /* fantasy */
+    --half-100:#faf4f1;
+    /* blue */
+    --blue-900:#7bbcfe;
+    --blue-800:#95c9fe;
+    --blue-700:#a3d0fe;
+    --blue-600:#b0d7fe;
+    --blue-500:#bddeff;
+    --blue-400:#cae4ff;
+    --blue-300:#d7ebff;
+    --blue-200:#e5f2ff;
+    --blue-100:#f2f8ff;
+    --steelblue-100:#4395a3;
+    --steelblue-200:#93cbd5;
+--blue-:#4070f4;
+}
+

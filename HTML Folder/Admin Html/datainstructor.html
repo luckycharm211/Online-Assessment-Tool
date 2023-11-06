@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Assets/CSS/Admin css/datainstructor.css">
+</head>
+<body>
+    <div>
+      <!-- header starts -->
+        <div class="header">
+            <div class="logo">
+                <img src="/Assets/Images/logo 2.png" alt="">
+                <p>EDU <span>PORTAL</span></p>
+            </div>
+            <div class="input-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here..." />
+                <button class="button">Search</button>
+            </div>
+            <div class="Notifications">
+                <a href=""> <i class="fa-solid fa-bell" style="color:black"></i></a>
+               <button class="signup">Sign Out</button>
+            </div>
+            
+
+            <img src="/Assets/Images/profile main.png" class="user-pic" onclick="toggleMenu()">
+
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="/Assets/Images/profile main.png" alt="" style="height: 100px; width:100px">
+                        <h2>Jenifer</h2>
+
+                    </div>
+                    <hr>
+
+                    <a href="" class="sub-menu-link">
+                        <p><i class="fa-solid fa-user-pen"></i><span>EditProfile</span></p>
+                       
+                    </a>
+                    <a href="" class="sub-menu-link">
+                        <p><i class="fa-solid fa-gear"></i> <span>Settings and Privacy</span></p>
+                       
+                    </a>
+                    <a href="" class="sub-menu-link">
+                        <p><i class="fa-solid fa-arrow-right-from-bracket"></i> <span>Logout </span></p>
+                       
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- header ends -->
+        <div class="flex">
+          <!-- nav starts -->
+            <div class="nav1">
+            <nav>
+              <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house" style="color:#fe4501"></i> <span
+                  class="nav-items">Dashboard</span></a></li>
+              <li><a href="Assessments.html"><i class="fa-solid fa-pen-to-square" style="color:#fe4501"></i>
+                <span class="nav-items">Assessments </span></a></li>
+            <li><a href="datainstructor.html"><i class="fa-solid fa-user" style="color:#fe4501"></i> <span
+                  class="nav-items">Instructors</span></a></li>
+            <li><a href="result.html"><i class="fa-solid fa-graduation-cap" style="color:#fe4501"></i> <span
+                  class="nav-items">Student</span></a></li>
+
+            <li><a href="performancemain.html"><i class="fa-solid fa-chart-simple" style="color:#fe4501"></i> <span
+                  class="nav-items">Performance</span></a></li>
+             <li><a href="help.html"><i class="fa-regular fa-question" style="color:#fe4501"></i> <span
+                  class="nav-items">Help</span></a></li>
+            <li><a href="/index1.html"><i class="fa-solid fa-backward" style="color:#fe4501"></i> <span
+                  class="nav-items">Logout</span></a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- nav ends -->
+            <section class="main">
+              <!-- bg1 -->
+                    <div class="users">
+                      <div class="bg1">
+
+                            <img src="/Assets/Images/Simple Shiny (1).svg" alt="">
+                        
+                        <div style="position: absolute;">
+                            <h3><i class="fa-solid fa-chalkboard-user fa-2xl" style="color: #ffffff;"></i><span>Instructors Information</span></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- bg ends -->
+                    <div class="stud">
+                      <div class="sec1">
+                        <input type="text" placeholder=" Search Instructor ID" required />
+                      </div>
+                      <!-- button -->
+                      <div class="last">
+                        <button><a href="instructorform.html">Add Instructor</a></button> 
+                      </div>
+                      <!-- button -->
+                    </div>
+                   <!-- table -->
+                    <section class="asses">
+                      <div class="asses-list">
+                        <div class="create">
+                            
+                        
+                        </div>
+                        
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>S No</th>
+                              <th>Student ID</th>
+                              <th>First Name</th>
+                              <th>Last Name</th>
+                               <th>Gender</th>
+                              <th>Email Address</th>
+                              <th>Assigned Modules</th>
+                              <th>Profile</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>01</td>
+                              <td>44123</td>
+                              <td>Rahul</td>
+                              <td>M</td>
+                              <td>Male</td>
+                              <td>2k20staff006@kiot.ac.in</td>
+                              <td>8</td>
+                              <td><button><a href="profileinstructor.html">View</a></button></td>
+                            </tr>
+                            <tr>
+                              <td>02</td>
+                              <td>45123</td>
+                              <td>Sidharth</td>
+                              <td>Kumar</td>
+                              <td>Male</td>
+                              <td>2k20staff007@kiot.ac.in</td>
+                              <td>4</td>
+                              <td><button><a href="Studentreport.html">View</a></button></td>
+                              </tr>
+                            <tr>
+                              <td>03</td>
+                              <td>48923</td>
+                              <td>Revathy</td>
+                              <td>Sampath</td>
+                              <td>Female</td>
+                              <td>2k20staff896@kiot.ac.in</td>
+                              <td>5</td>
+                              <td><button><a href="Studentreport.html">View</a></button></td>
+                              
+                            </tr>
+                            <tr>
+                              <td>04</td>
+                              <td>44423</td>
+                              <td>Prabhanjan</td>
+                              <td>GK</td>
+                              <td>Male</td>
+                              <td>2k20staff456@kiot.ac.in</td>
+                              <td>4</td>
+                              <td><button><a href="Studentreport.html">View</a></button></td>
+                              </tr>
+                            <tr >
+                              <td>05</td>
+                              <td>48123</td>
+                              <td>Amaravathy</td>
+                              <td>Mohan</td>
+                              <td>Female</td>
+                              <td>2k20staff506@kiot.ac.in</td>
+                              <td>5</td>
+                              <td><button><a href="Studentreport.html">View</a></button></td>
+                            </tr>
+                            <tr >
+                              <td>06</td>
+                              <td>45633</td>
+                              <td>Ramala</td>
+                              <td>Begum</td>
+                              <td>Female</td>
+                              <td>2k20staff806@kiot.ac.in</td>
+                              <td>6</td>
+                              <td><button><a href="Studentreport.html">View</a></button></td>
+                             </tr>
+                          </tbody>
+                        </table>
+                        <!-- table ends -->
+                      </div>
+                    </section>
+                  </section>
+
+
+            
+          
+
+            
+
+
+        </div>
+    </div>
+    <script>
+        let subMenu = document.getElementById("subMenu");
+        function toggleMenu() {
+            subMenu.classList.toggle("open-Menu")
+        }
+    </script>
+</body>
+
+</html>

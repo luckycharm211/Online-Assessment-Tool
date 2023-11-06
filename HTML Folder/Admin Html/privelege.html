@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/Assets/CSS/Admin css/privelege.css">
+</head>
+
+<body>
+  <div>
+    <div class="header">
+      <div class="logo">
+        <img src="/Assets/Images/logo 2.png" alt="">
+        <p>EDU <span>PORTAL</span></p>
+      </div>
+      <div class="input-box">
+        <i class="uil uil-search"></i>
+        <input type="text" placeholder="Search here..." />
+        <button class="button">Search</button>
+      </div>
+      <div class="Notifications">
+        <a href=""> <i class="fa-solid fa-bell" style="color:black"></i></a>
+        <button class="signup">Sign Out</button>
+      </div>
+
+
+      <img src="/Assets/Images/profile main.png" class="user-pic" onclick="toggleMenu()">
+
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img src="/Assets/Images/profile main.png" alt="" style="height: 100px; width:100px">
+            <h2>Jenifer</h2>
+
+          </div>
+          <hr>
+
+          <a href="" class="sub-menu-link">
+            <p><i class="fa-solid fa-user-pen"></i><span>EditProfile</span></p>
+
+          </a>
+          <a href="" class="sub-menu-link">
+            <p><i class="fa-solid fa-gear"></i> <span>Settings and Privacy</span></p>
+
+          </a>
+          <a href="" class="sub-menu-link">
+            <p><i class="fa-solid fa-arrow-right-from-bracket"></i> <span>Logout </span></p>
+
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="flex">
+      <div class="nav1">
+        <nav>
+          <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house" style="color:#fe4501"></i> <span
+              class="nav-items">Dashboard</span></a></li>
+          <li><a href="Assessments.html"><i class="fa-solid fa-pen-to-square" style="color:#fe4501"></i>
+            <span class="nav-items">Assessments </span></a></li>
+        <li><a href="datainstructor.html"><i class="fa-solid fa-user" style="color:#fe4501"></i> <span
+              class="nav-items">Instructors</span></a></li>
+        <li><a href="result.html"><i class="fa-solid fa-graduation-cap" style="color:#fe4501"></i> <span
+              class="nav-items">Student</span></a></li>
+
+        <li><a href="performancemain.html"><i class="fa-solid fa-chart-simple" style="color:#fe4501"></i> <span
+              class="nav-items">Performance</span></a></li>
+         <li><a href="help.html"><i class="fa-regular fa-question" style="color:#fe4501"></i> <span
+              class="nav-items">Help</span></a></li>
+        <li><a href="/index1.html"><i class="fa-solid fa-backward" style="color:#fe4501"></i> <span
+              class="nav-items">Logout</span></a></li>
+          </ul>
+        </nav>
+
+      </div>
+      <section class="main">
+
+        <div class="allocation">
+          <section class="student">
+            <header>Manage Students</header>
+            <form action="#" class="stud">
+              <div class="address">
+                <label>Add Students</label>
+                <div class="select-box">
+                  <select>
+                    <option hidden>Select an option</option>
+                    <option>Individual Students</option>
+                    <option>Multiple Students</option>
+                  </select>
+                </div>
+              </div>
+              <button onclick="openPop()">Save and Continue</button>
+            </form>
+            <div class="popup" id="popup">
+              <form action="#" class="stud">
+                <div class="address">
+                  <label>Student Id</label>
+                  <input type="number" placeholder=" Enter Student ID" required />
+                  <br>
+                  <div>
+                    <br>
+                    <label>Email-Address</label>
+                    <input type="email" placeholder="Enter email Address" required />
+                  </div>
+
+                </div>
+                <button onclick="closePop()">Save and Continue</button>
+              </form>
+            </div>
+          </section>
+          <!-- section 2 -->
+          <section class="student">
+            <header>Manage Instructor</header>
+            <form action="#" class="stud">
+              <div class="address">
+                <label>Add Instructor</label>
+                <div class="select-box">
+                  <select>
+                    <option hidden>Select an option</option>
+                    <option>Individual Intructor</option>
+                    <option>Multiple Instructors</option>
+                  </select>
+                </div><br>
+              </div>
+              <button onclick="openPop1()">Save and Continue</button>
+            </form>
+            <div class="popup1" id="popup1">
+              <form action="#" class="stud">
+                
+                <div class="address">
+                  <label>Instructor Id</label>
+                  <input type="number" placeholder=" Enter Instuctor ID" required />
+                  <br>
+                  <div>
+                    <br>
+                    <label>Email-Address</label>
+                    <input type="email" placeholder="Enter email Address" required />
+                  </div>
+
+                </div>
+                <button onclick="closePop1()">Save and Continue</button>
+              </form>
+            </div>
+          </section>
+          <!-- section 2 -->
+
+
+
+          <script>
+            let popup1 = document.getElementById("popup1");
+            function openPop1() {
+              popup1.classList.add("open-popup1");
+            }
+            function closePop1() {
+              popup1.classList.remove("open-popup1");
+            }
+          </script>
+        </div>
+        <section class="assessment">
+          <h1>Intructors Alloted</h1>
+          <div class="assessment-list">
+            <div class="create">
+
+
+            </div>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>S No</th>
+                  <th> Student ID</th>
+                  <th>First name</th>
+                  <th>Last name</th>
+                  <th>Email Address</th>
+                  <th>Module Name</th>
+                  <th>Action</th>
+                  
+
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>41253</td>
+                  <td>Ashok</td>
+                  <td>Kumar</td>
+                  
+                  <td>ashokkumar342@gmail.com</td>
+                  <td>Java Developer</td>
+                  <td><i class="fa-regular fa-trash-can" style="color: #e74b4b;"></i></td>
+                 </tr>
+                <tr >
+                  <tr>
+                    <td>02</td>
+                    <td>41255</td>
+                    <td>Malathy </td>
+                    <td>Ravichandran</td>
+                    
+                    <td>Malathyravichandran111@gmail.com</td>
+                    <td>Java Developer</td>
+                    <td><i class="fa-regular fa-trash-can" style="color: #e74b4b;"></i></td>
+                   </tr>
+                </tr>
+                <tr>
+                  <tr>
+                    <td>03</td>
+                    <td>41259</td>
+                    <td>Sandhya</td>
+                    <td>K</td>
+                    
+                    <td>Sandhya452@gmail.com</td>
+                    <td>Java Developer</td>
+                    <td><i class="fa-regular fa-trash-can" style="color: #e74b4b;"></i></td>
+                   </tr>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </section>
+        
+        <section class="assessment">
+          <h1>Students Enrolled</h1>
+          <div class="assessment-list">
+            <div class="create">
+
+
+            </div>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>S No</th>
+                  <th> Student ID</th>
+                  <th>First name</th>
+                  <th>Last name</th>
+                  <th>Email Address</th>
+                  <th>Module Name</th>
+                  <th>Action</th>
+                  
+
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>54123</td>
+                  <td>Kowshika</td>
+                  <td>Sankar</td>
+                  
+                  <td>2k20ece0068@kiot.ac.in</td>
+                  <td>Java Developer</td>
+                  <td><i class="fa-regular fa-trash-can" style="color: #e74b4b;"></i></td>
+                 </tr>
+                <tr >
+                  <tr>
+                    <td>02</td>
+                    <td>54124</td>
+                    <td>Aruna </td>
+                    <td>Perumal</td>
+                    
+                    <td>2k20ece006@kiot.ac.in</td>
+                    <td>Java Developer</td>
+                    <td><i class="fa-regular fa-trash-can" style="color: #e74b4b;"></i></td>
+                   </tr>
+                </tr>
+                <tr>
+                  <tr>
+                    <td>03</td>
+                    <td>54125</td>
+                    <td>Karthik </td>
+                    <td>Kumar</td>
+                    
+                    <td>2k20ece030@kiot.ac.in</td>
+                    <td>Java Developer</td>
+                    <td><i class="fa-regular fa-trash-can" style="color: #e74b4b;"></i></td>
+                   </tr>
+                </tr>
+                <tr>
+                  <tr>
+                    <td>04</td>
+                    <td>54126</td>
+                    <td>Kiruthikaa</td>
+                    <td>BD</td>
+                    
+                    <td>2k20ece080@kiot.ac.in</td>
+                    <td>Java Developer</td>
+                    <td><i class="fa-regular fa-trash-can" style="color: #e74b4b;"></i></td>
+                   </tr>
+                </tr>
+                <tr>
+                  <tr>
+                    <td>05</td>
+                    <td>54127</td>
+                    <td>Haripriya</td>
+                    <td>S</td>
+                    
+                    <td>2k20ece010@kiot.ac.in</td>
+                    <td>Java Developer</td>
+                    <td><i class="fa-regular fa-trash-can" style="color: #e74b4b;"></i></td>
+                   </tr>
+                </tr>
+                <tr>
+                  <tr>
+                    <td>06</td>
+                    <td>54128</td>
+                    <td>Navina </td>
+                    <td>Mohan</td>
+                    
+                    <td>2k20ece006@kiot.ac.in</td>
+                    <td>Java Developer</td>
+                    <td><i class="fa-regular fa-trash-can" style="color: #e74b4b;"></i></td>
+                   </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+  <script>
+    let subMenu = document.getElementById("subMenu");
+    function toggleMenu() {
+      subMenu.classList.toggle("open-Menu")
+    }
+  </script>
+  <script>
+    let popup = document.getElementById("popup");
+    function openPop() {
+      popup.classList.add("open-popup");
+    }
+    function closePop() {
+      popup.classList.remove("open-popup");
+    }
+  </script>
+
+
+
+</body>
+
+</html>

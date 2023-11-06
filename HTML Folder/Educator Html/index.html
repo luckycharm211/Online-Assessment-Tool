@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Assets/CSS/Educator css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <div class="logo">
+                <img src="/Assets/Images/logo 2.png" alt="">
+                <p>EDU <span>PORTAL</span></p>
+            </div>
+            <div class="input-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here..." />
+                <button class="button">Search</button>
+            </div>
+
+            <img src="/Assets/Images/profile main.png" class="user-pic" onclick="toggleMenu()">
+
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="/Assets/Images/profile main.png" alt="" style="height: 100px; width:100px">
+                        <h2>Jenifer</h2>
+
+                    </div>
+                    <hr>
+
+                    <a href="" class="sub-menu-link">
+                        <p><i class="fa-solid fa-user-pen"></i>EditProfile</p>
+                        <span> ></span>
+                    </a>
+                    <a href="" class="sub-menu-link">
+                        <p><i class="fa-solid fa-gear"></i>Settings and Privacy</p>
+                        <span>></span>
+                    </a>
+                    <a href="" class="sub-menu-link">
+                        <p><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout </p>
+                        <span>></span>
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="nav1">
+                <nav>
+                    <ul>
+                        <li><a href="Dashboard.html"><i class="fa-solid fa-pen-to-square" style="color:#fe4501"></i> <span
+                            class="nav-items">Assessments</span></a></li>
+                      <li><a href="maininstructor.html"><i class="fa-regular fa-star-half-stroke " style="color:#fe4501"></i> <span
+                            class="nav-items">Results</span></a></li>
+                      <li><a href="Grademain.html"><i class="fa-solid fa-marker" style="color:#fe4501"></i> <span
+                            class="nav-items">Gradebook</span></a></li>
+                            <li><a href="qb.html"><i class="fa-solid fa-file" style="color:#fe4501"></i> <span
+                              class="nav-items">Question Bank</span></a></li>
+                      <li><a href="profile.html"><i class="fa-solid fa-user" style="color:#fe4501"></i> <span
+                            class="nav-items">Profile</span></a></li>
+                      
+                      <li><a href="help.html"><i class="fa-regular fa-question" style="color:#fe4501"></i> <span
+                            class="nav-items">Help</span></a></li>
+                      <li><a href="/index1.html"><i class="fa-solid fa-backward" style="color:#fe4501"></i> <span
+                            class="nav-items">Logout</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- question creation -->
+            <div class="questions">
+
+                <!-- text area -->
+                <div class="text_area">
+
+                    <div class="asses_name">
+
+                        <!-- <form action="">
+                            <label for="aname"><span>Assessment Name</span></label>
+                            <input type="text" id="aname" name="aname" value=""><br>
+                        </form> -->
+
+                    </div>
+
+                    <div class="qs_no">
+                        <label for="number"> <span>Qs No</span></label>
+                        <input type="number" id="number" placeholder="1" name="number" />
+                    </div>
+                    <div class="ckeditor">
+                        <form action="">
+                            <textarea id="editor" name="content" id="" cols="30" rows="10"></textarea>
+                        </form>
+                    </div>
+                    <div>
+                        <div class="quiz-container" id="quiz">
+                            <div class="quiz-header">
+                                <!-- <h2 id="question">Question Text</h2> -->
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="styles" id="accent" class="answer">
+                                        <label for="accent" id="a_text"><input type="text"
+                                                placeholder="option 1"></label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="styles" id="accent" class="answer">
+                                        <label for="accent" id="b_text"><input type="text"
+                                                placeholder="option 2"></label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="styles" id="accent" class="answer">
+                                        <label for="accent" id="c_text"><input type="text"
+                                                placeholder="option 3"></label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="styles" id="accent" class="answer">
+                                        <label for="accent" id="d_text">
+                                            <input type="text" placeholder="option 4">
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="save">
+
+                                <button id="submit">Save</button>
+                            </div>
+
+                        </div>
+                        <div class="navi_main">
+                            <ul class="navi">
+                                <div style="display: flex; width:200px;justify-content: space-between;">
+                                    <button id="clear"><i class="fa-solid fa-backward fa-xl"></i></button>
+                                    <button id="clear"><i class="fa-solid fa-forward fa-xl"></i></button>
+
+                                </div>
+
+                                <button  style="width:160px"><i class="fa-solid fa-plus"
+                                        style="padding: 10px;"></i><a href="#id1">Add Question</a></button>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- last -->
+                <div class="create">
+                    <button><a href="firstcreation.html">Create New Assessment</a> </button>
+                    <div class="side_main">
+
+                        <h4>Test Configuration</h4>
+                        <div class="side_1">
+                            <form action="">
+                                <label for="aname">Section</label><br>
+                                <div class="select">
+
+                                    <select name="slct" id="slct">
+                                        <option value="1">Section 1</option>
+                                        <option value="2">Section 2</option>
+                                    </select>
+                                </div>
+                                <label for="standard-select">Question Format</label>
+                                <div class="select">
+                                    <select name="slct" id="slct" style="font-size: 16px; font-size: 16px;">
+                                        <option value="1">MCQ</option>
+                                        <option value="2">True/False</option>
+                                        <option value="3">Short Answer</option>
+                                        <option value="4">Descriptive Answer</option>
+                                        <option value="5">Coding </option>
+                                        <option value="6">JAVA</option>
+                                    </select>
+                                </div>
+                                <div class="number">
+                                    <label for="number">Max Marks</label><br>
+                                    <input type="number" placeholder=" 1" id="number" name="number" />
+                                </div>
+                                <label for="standard-select">Grading Format</label>
+                                <div class="select">
+
+                                    <select name="slct" id="slct">
+
+                                        <option value="1">Automatic System</option>
+                                        <option value="2">Manual System</option>
+                                    </select>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- question ends -->
+
+        </div>
+        <div class="questions" id="id1" style="margin-top: 30px;">
+
+            <!-- text area -->
+            <div class="text_area">
+
+                <div class="asses_name">
+
+                    <!-- <form action="">
+                        <label for="aname"><span>Assessment Name</span></label>
+                        <input type="text" id="aname" name="aname" value=""><br>
+                    </form> -->
+
+                </div>
+
+                <div class="qs_no">
+                    <label for="number"> <span>Qs No</span></label>
+                    <input type="number" id="number" placeholder="2" name="number" />
+                </div>
+                <div class="ckeditor">
+                    <form action="">
+                        <textarea id="editor2" name="content" id="" cols="30" rows="10"></textarea>
+                    </form>
+                </div>
+                <div>
+                    <div class="quiz-container" id="quiz">
+                        <div class="quiz-header">
+                            <!-- <h2 id="question">Question Text</h2> -->
+                            <ul>
+                                <li>
+                                    <input type="radio" name="styles" id="accent" class="answer">
+                                    <label for="accent" id="a_text"><input type="text" value="True"></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="styles" id="accent" class="answer">
+                                    <label for="accent" id="b_text"><input type="text" value="False"></label>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="save">
+
+                            <button id="submit">Save</button>
+                        </div>
+
+                    </div>
+                    <div class="navi_main">
+                        <ul class="navi">
+                            <div style="display: flex; width:200px;justify-content: space-between;">
+                                <button id="clear"><i class="fa-solid fa-backward fa-xl"></i></button>
+                                <button id="clear"><i class="fa-solid fa-forward fa-xl"></i></button>
+
+                            </div>
+
+                            <button id="submit" style="width:160px"><i class="fa-solid fa-plus"
+                                    style="padding: 10px;"></i>Add Question</button>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- last -->
+            <div class="create">
+                <!-- <button> Create New Assessment</button> -->
+                <div class="side_main">
+
+                    <h4>Test Configuration</h4>
+                    <div class="side_1">
+                        <form action="">
+                            <label for="aname">Section</label><br>
+                            <div class="select">
+
+                                <select name="slct" id="slct">
+                                    <option value="1">Section 1</option>
+                                    <option value="2">Section 2</option>
+                                </select>
+                            </div>
+                            <label for="standard-select">Question Format</label>
+                            <div class="select">
+                                <select name="slct" id="slct" style="font-size: 16px; font-size: 16px;">
+                                    <option value="1">True/False</option>
+                                    <option value="2">MCQ</option>
+                                    <option value="3">Short Answer</option>
+                                    <option value="4">Descriptive Answer</option>
+                                    <option value="5">Coding </option>
+                                    <option value="6">JAVA</option>
+                                </select>
+                            </div>
+                            <div class="number">
+                                <label for="number">Max Marks</label><br>
+                                <input type="number" placeholder=" 1" id="number" name="number" />
+                            </div>
+                            <label for="standard-select">Grading Format</label>
+                            <div class="select">
+
+                                <select name="slct" id="slct">
+
+                                    <option value="1">Automatic System</option>
+                                    <option value="2">Manual System</option>
+                                </select>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- question ends -->
+        <div class="questions">
+
+            <!-- text area -->
+            <div class="text_area">
+
+                <div class="asses_name">
+
+                    <!-- <form action="">
+                        <label for="aname"><span>Assessment Name</span></label>
+                        <input type="text" id="aname" name="aname" value=""><br>
+                    </form> -->
+
+                </div>
+
+                <div class="qs_no">
+                    <label for="number"> <span>Qs No</span></label>
+                    <input type="number" id="number" placeholder="2" name="number" />
+                </div>
+                
+                <div class="ckeditor">
+                    <form action="">
+                        <textarea id="editor1" name="content" id="" cols="30" rows="10"></textarea>
+                    </form>
+                </div>
+                <div>
+                    <div class="quiz-container" id="quiz">
+                        <div class="quiz-header">
+                            <!-- <h2 id="question">Question Text</h2> -->
+                            <!-- <ul>
+                                <li>
+                                    <input type="radio" name="styles" id="accent" class="answer">
+                                    <label for="accent" id="a_text"><input type="text" value="True"></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="styles" id="accent" class="answer">
+                                    <label for="accent" id="b_text"><input type="text"
+                                            value="False"></label>
+                                </li>
+                                
+                            </ul> -->
+                        </div>
+                        <div class="save">
+
+                            <button id="submit">Save</button>
+                        </div>
+
+                    </div>
+                    <div class="navi_main">
+                        <ul class="navi">
+                            <div style="display: flex; width:200px;justify-content: space-between;">
+                                <button id="clear"><i class="fa-solid fa-backward fa-xl"></i></button>
+                                <button id="clear"><i class="fa-solid fa-forward fa-xl"></i></button>
+
+                            </div>
+
+                            <button id="submit" style="width:160px"><i class="fa-solid fa-plus"
+                                    style="padding: 10px;"></i>Add Question</button>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- last -->
+            <div class="create">
+                <!-- <button> Create New Assessment</button> -->
+                <div class="side_main">
+
+                    <h4>Test Configuration</h4>
+                    <div class="side_1">
+                        <form action="">
+                            <label for="aname">Section</label><br>
+                            <div class="select">
+
+                                <select name="slct" id="slct">
+                                    <option value="1">Section 1</option>
+                                    <option value="2">Section 2</option>
+                                </select>
+                            </div>
+                            <label for="standard-select">Question Format</label>
+                            <div class="select">
+                                <select name="slct" id="slct" style="font-size: 16px; font-size: 16px;">
+                                    <option value="1">Descriptive Answer</option>
+                                    <option value="2">MCQ</option>
+                                    <option value="3">Short Answer</option>
+                                    <option value="4">Short Answer</option>
+                                    <option value="5">Coding </option>
+                                    <option value="6">Assessment Submission</option>
+                                </select>
+                            </div>
+                            <div class="number">
+                                <label for="number">Max Marks</label><br>
+                                <input type="number" placeholder=" 1" id="number" name="number" />
+                            </div>
+                            <label for="standard-select">Grading Format</label>
+                            <div class="select">
+
+                                <select name="slct" id="slct">
+
+                                    <option value="1">Manual System</option>
+                                    <option value="2">Automatic System</option>
+                                    
+                                </select>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>  
+        <!-- question ends -->
+        <div class="questions">
+
+            <!-- text area -->
+            <div class="text_area">
+
+                <div class="asses_name">
+
+                    <!-- <form action="">
+                        <label for="aname"><span>Assessment Name</span></label>
+                        <input type="text" id="aname" name="aname" value=""><br>
+                    </form> -->
+
+                </div>
+
+                <div class="qs_no">
+                    <label for="number"> <span>Qs No</span></label>
+                    <input type="number" id="number" placeholder="2" name="number" />
+                </div>
+                <div class="ckeditor">
+                    <form action="">
+                        <textarea id="editor3" name="content" id="" cols="30" rows="10"></textarea>
+                    </form>
+                </div>
+                <div>
+                    <div class="quiz-container" id="quiz">
+                        <div class="quiz-header">
+                            <!-- <h2 id="question">Question Text</h2> -->
+                            <!-- <ul>
+                                <li>
+                                    <input type="radio" name="styles" id="accent" class="answer">
+                                    <label for="accent" id="a_text"><input type="text" value="True"></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="styles" id="accent" class="answer">
+                                    <label for="accent" id="b_text"><input type="text"
+                                            value="False"></label>
+                                </li>
+                                
+                            </ul> -->
+                        </div>
+                        <div class="save">
+
+                            <button id="submit">Save</button>
+                        </div>
+
+                    </div>
+                    <div class="navi_main">
+                        <ul class="navi">
+                            <div style="display: flex; width:200px;justify-content: space-between;">
+                                <button id="clear"><i class="fa-solid fa-backward fa-xl"></i></button>
+                                <button id="clear"><i class="fa-solid fa-forward fa-xl"></i></button>
+
+                            </div>
+
+                            <button id="submit" style="width:160px"><i class="fa-solid fa-plus"
+                                    style="padding: 10px;"></i>Add Question</button>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- last -->
+            <div class="create">
+                <!-- <button> Create New Assessment</button> -->
+                <div class="side_main">
+
+                    <h4>Test Configuration</h4>
+                    <div class="side_1">
+                        <form action="">
+                            <label for="aname">Section</label><br>
+                            <div class="select">
+
+                                <select name="slct" id="slct">
+                                    <option value="1">Section 1</option>
+                                    <option value="2">Section 2</option>
+                                </select>
+                            </div>
+                            <label for="standard-select">Question Format</label>
+                            <div class="select">
+                                <select name="slct" id="slct" style="font-size: 16px; font-size: 16px;">
+                                    <option value="1">Descriptive Answer</option>
+                                    <option value="2">MCQ</option>
+                                    <option value="3">Short Answer</option>
+                                    <option value="4">Short Answer</option>
+                                    <option value="5">Coding </option>
+                                    <option value="6">Assessment Submission</option>
+                                </select>
+                            </div>
+                            <div class="number">
+                                <label for="number">Max Marks</label><br>
+                                <input type="number" placeholder=" 1" id="number" name="number" />
+                            </div>
+                            <label for="standard-select">Grading Format</label>
+                            <div class="select">
+
+                                <select name="slct" id="slct">
+
+                                    <option value="1">Manual System</option>
+                                    <option value="2">Automatic System</option>
+                                    
+                                </select>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div> 
+        <div class="questions">
+
+            <!-- text area -->
+            <div class="text_area">
+
+
+                <div class="qs_no">
+                    <label for="number"> <span>Qs No</span></label>
+                    <input type="number" id="number" placeholder="2" name="number" />
+                </div>
+                <div class="ckeditor">
+                    <form action="">
+                        <textarea id="editor4" name="content" id="" cols="30" rows="10"></textarea>
+                    </form>
+                </div>
+                <div>
+                    <div class="quiz-container" id="quiz">
+                        <div class="quiz-header">
+                            <section class="cont">
+                                <form action="#" class="form">
+                                  <div>
+                                      <h2>Sample Test Cases</h2><br>
+                                      <div class="inputbox">
+                                          <h4>Test Case-1</h4><br>
+                                          <label>Input</label>
+                                          <input type="text" placeholder="Enter Input Values" required />
+                                        </div>
+                                        <div class="inputbox">
+                                          <label>Output</label>
+                                          <input type="text" placeholder="Enter expected Output Values" required />
+                                        </div>
+                                  </div>
+                                  <div>
+                                      
+                                      <div class="inputbox">
+                                          <h4>Test Case-2</h4><br>
+                                          <label>Input</label>
+                                          <input type="text" placeholder="Enter Input Values" required />
+                                        </div>
+                                        <div class="inputbox">
+                                          <label>Output</label>
+                                          <input type="text" placeholder="Enter expected Output Values" required />
+                                        </div>
+                                  </div>
+                                  <div>
+                                     
+                                      <div class="inputbox">
+                                          <h4>Test Case-3</h4><br>
+                                          <label>Input</label>
+                                          <input type="text" placeholder="Enter Input Values" required />
+                                        </div>
+                                        <div class="inputbox">
+                                          <label>Output</label>
+                                          <input type="text" placeholder="Enter expected Output Values" required />
+                                        </div> <br> <br> <br>
+                                        <hr>
+                                  </div>
+                                  <div>
+                                     
+                                          <h2 style="margin-top: 20px;">Hidden Test Cases</h2><br>
+                                      
+                                      
+                                      <div class="col">
+                                      
+                                          <div class="inputbox">
+                                              <label>Test Case Name</label>
+                                              <input type="text" placeholder="Enter full name" required />
+                                            </div>
+                                            <div class="inputbox">
+                                              <label>Difficulty</label>
+                                              <div class="selectbox">
+                                                <select>
+                                                  <option hidden>Hard</option>
+                                                  <option>Medium</option>
+                                                  <option>Difficult</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                            <div class="inputbox">
+                                              <label>Score</label>
+                                              <input type="number" placeholder="Enter Marks" required />
+                                            </div>
+                                         
+                                      </div>
+                                      
+                                      <div class="col">
+                                          <div class="inputbox">
+                                              <label>Input</label>
+                                              <textarea name="" id="" cols="37" rows="5" placeholder="Enter Input Values here"></textarea>
+                                            </div>
+                                            <div class="inputbox">
+                                              <label>Output</label>
+                                              <textarea name="" id="" cols="37" rows="5" placeholder="Enter Expected Output Values here"></textarea>
+                                            </div>
+                                      </div>
+                                      <button >Save</button>
+                              
+                                  </div>
+                                  <!-- hidden 2 -->
+                                  <div>
+                                     
+                                    <h2 style="margin-top: 20px;">Hidden Test Cases</h2><br>
+                                
+                                
+                                <div class="col">
+                                
+                                    <div class="inputbox">
+                                        <label>Test Case Name</label>
+                                        <input type="text" placeholder="Enter full name" required />
+                                      </div>
+                                      <div class="inputbox">
+                                        <label>Difficulty</label>
+                                        <div class="selectbox">
+                                          <select>
+                                            <option hidden>Hard</option>
+                                            <option>Medium</option>
+                                            <option>Difficult</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <div class="inputbox">
+                                        <label>Score</label>
+                                        <input type="number" placeholder="Enter Marks" required />
+                                      </div>
+                                   
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="inputbox">
+                                        <label>Input</label>
+                                        <textarea name="" id="" cols="37" rows="5" placeholder="Enter Input Values here"></textarea>
+                                      </div>
+                                      <div class="inputbox">
+                                        <label>Output</label>
+                                        <textarea name="" id="" cols="37" rows="5" placeholder="Enter Expected Output Values here"></textarea>
+                                      </div>
+                                </div>
+                               
+                        
+                            </div>
+                            
+                                  
+                                  
+                                  <button class="btn1">Add Test Cases</button>
+                                </form>
+                            
+                        </div>
+                        <div class="save">
+
+                            <button id="submit" class="btn1">Save</button>
+                        </div>
+
+                    </div>
+                    <div class="navi_main">
+                        <ul class="navi">
+                            <div style="display: flex; width:200px;justify-content: space-between;">
+                                <button id="clear"><i class="fa-solid fa-backward fa-xl"></i></button>
+                                <button id="clear"><i class="fa-solid fa-forward fa-xl"></i></button>
+
+                            </div>
+
+                            <button id="submit" style="width:160px"><i class="fa-solid fa-plus"
+                                    style="padding: 10px;"></i>Add Question</button>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- last -->
+            <div class="create">
+                <!-- <button> Create New Assessment</button> -->
+                <div class="side_main">
+
+                    <h4>Test Configuration</h4>
+                    <div class="side_1">
+                        <form action="">
+                            <label for="aname">Section</label><br>
+                            <div class="select">
+
+                                <select name="slct" id="slct">
+                                    <option value="1">Section 1</option>
+                                    <option value="2">Section 2</option>
+                                </select>
+                            </div>
+                            <label for="standard-select">Question Format</label>
+                            <div class="select">
+                                <select name="slct" id="slct" style="font-size: 16px; font-size: 16px;">
+                                    <option value="1">Descriptive Answer</option>
+                                    <option value="2">MCQ</option>
+                                    <option value="3">Short Answer</option>
+                                    <option value="4">Short Answer</option>
+                                    <option value="5">Coding </option>
+                                    <option value="6">Assessment Submission</option>
+                                </select>
+                            </div>
+                            <div class="number">
+                                <label for="number">Max Marks</label><br>
+                                <input type="number" placeholder=" 1" id="number" name="number" />
+                            </div>
+                            <label for="standard-select">Grading Format</label>
+                            <div class="select">
+
+                                <select name="slct" id="slct">
+
+                                    <option value="1">Manual System</option>
+                                    <option value="2">Automatic System</option>
+                                    
+                                </select>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div> 
+        <div class="last">
+            <button><a href="Assessments.html">Create Assessment</a></button> 
+        </div>
+        
+        <!-- question ends -->
+
+
+
+
+
+
+
+    </div>
+    
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor1'))
+            .then(editor => {
+                console.log(editor1);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor2'))
+            .then(editor => {
+                console.log(editor2);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor3'))
+            .then(editor => {
+                console.log(editor3);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor4'))
+            .then(editor => {
+                console.log(editor3);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
+    <script>
+        let subMenu = document.getElementById("subMenu");
+        function toggleMenu() {
+            subMenu.classList.toggle("open-Menu")
+        }
+    </script>
+</body>
+
+</html>
